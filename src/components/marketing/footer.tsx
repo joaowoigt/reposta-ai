@@ -10,7 +10,7 @@ export function Footer() {
               Repost<span className="text-primary-400">AI</span>
             </span>
             <p className="font-body text-sm mt-2 max-w-xs">
-              Transforme 1 conteudo em 10 posts — em segundos.
+              Transforme 1 conteúdo em 10 posts — em segundos.
             </p>
           </div>
           <nav className="flex gap-8">

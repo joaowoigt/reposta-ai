@@ -8,7 +8,7 @@ export default function PricingPage() {
           Planos simples, sem surpresas
         </h1>
         <p className="font-body text-lg text-neutral-500 text-center mt-4 max-w-2xl mx-auto">
-          Comece gratis e escale conforme sua necessidade.
+          Comece grátis e escale conforme sua necessidade.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
           <PricingCard
@@ -16,23 +16,23 @@ export default function PricingPage() {
             price="$0"
             description="Para experimentar o poder do repurposing."
             features={[
-              "5 repurposes por mes",
+              "5 repurposes por mês",
               "3 plataformas (X, LinkedIn, Newsletter)",
-              "Historico de 7 dias",
+              "Histórico de 7 dias",
             ]}
-            cta="Começar gratis"
+            cta="Começar grátis"
           />
           <PricingCard
             name="Creator"
             price="$19"
-            period="mes"
-            description="Para criadores de conteudo serios."
+            period="mês"
+            description="Para criadores de conteúdo sérios."
             features={[
-              "50 repurposes por mes",
+              "50 repurposes por mês",
               "Todas as plataformas",
-              "Historico ilimitado",
+              "Histórico ilimitado",
               "Tom de voz personalizado",
-              "Suporte prioritario",
+              "Suporte prioritário",
             ]}
             cta="Assinar Creator"
             highlighted
@@ -40,8 +40,8 @@ export default function PricingPage() {
           <PricingCard
             name="Pro"
             price="$49"
-            period="mes"
-            description="Para equipes e agencias."
+            period="mês"
+            description="Para equipes e agências."
             features={[
               "Repurposes ilimitados",
               "Todas as plataformas",

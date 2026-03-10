@@ -8,9 +8,9 @@ export function Header() {
           Repost<span className="text-primary-500">AI</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#como-funciona" className="font-body text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
+          <Link href="/#como-funciona" className="font-body text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
             Como funciona
-          </a>
+          </Link>
           <Link href="/pricing" className="font-body text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
             Pricing
           </Link>

@@ -9,11 +9,11 @@ export default function HomePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8 text-center">
           <h1 className="font-heading text-4xl md:text-[56px] font-extrabold text-neutral-900 leading-[1.1] tracking-tight max-w-3xl mx-auto">
-            Transforme 1 conteudo em 10 posts —{" "}
+            Transforme 1 conteúdo em 10 posts —{" "}
             <span className="text-primary-500">em segundos</span>
           </h1>
           <p className="font-body text-lg text-neutral-500 mt-6 max-w-2xl mx-auto leading-relaxed">
-            Cole seu artigo, blog post ou transcricao. A IA gera posts otimizados
+            Cole seu artigo, blog post ou transcrição. A IA gera posts otimizados
             para X, LinkedIn, Instagram e Newsletter.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -21,7 +21,7 @@ export default function HomePage() {
               href="/login"
               className="bg-primary-500 text-white font-body font-medium px-6 py-3 rounded-lg text-base hover:bg-primary-400 active:bg-primary-600 transition-colors duration-200 shadow-sm"
             >
-              Começar gratis
+              Começar grátis
             </Link>
             <a
               href="#como-funciona"
@@ -40,13 +40,13 @@ export default function HomePage() {
             Como funciona
           </h2>
           <p className="font-body text-lg text-neutral-500 text-center mt-4 max-w-2xl mx-auto">
-            Tres passos. Zero esforco. Conteudo pronto para publicar.
+            Três passos. Zero esforço. Conteúdo pronto para publicar.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
             <FeatureStep
               step={1}
-              title="Cole seu conteudo"
-              description="Artigo, blog post, transcricao de video, thread — qualquer texto longo."
+              title="Cole seu conteúdo"
+              description="Artigo, blog post, transcrição de vídeo, thread — qualquer texto longo."
               icon={
                 <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
@@ -66,7 +66,7 @@ export default function HomePage() {
             <FeatureStep
               step={3}
               title="Receba posts prontos"
-              description="Copie e publique. Cada post e otimizado para a plataforma escolhida."
+              description="Copie e publique. Cada post é otimizado para a plataforma escolhida."
               icon={
                 <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
@@ -84,7 +84,7 @@ export default function HomePage() {
             Plataformas suportadas
           </h2>
           <p className="font-body text-lg text-neutral-500 mt-4 max-w-2xl mx-auto">
-            Um conteudo, multiplos formatos. Cada post respeita as regras e boas praticas da plataforma.
+            Um conteúdo, múltiplos formatos. Cada post respeita as regras e boas práticas da plataforma.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-12">
             <PlatformBadge name="X (Twitter)" icon="𝕏" bg="bg-neutral-900" />
@@ -102,7 +102,7 @@ export default function HomePage() {
             Planos simples, sem surpresas
           </h2>
           <p className="font-body text-lg text-neutral-500 text-center mt-4 max-w-2xl mx-auto">
-            Comece gratis e escale conforme sua necessidade.
+            Comece grátis e escale conforme sua necessidade.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
             <PricingCard
@@ -110,23 +110,23 @@ export default function HomePage() {
               price="$0"
               description="Para experimentar o poder do repurposing."
               features={[
-                "5 repurposes por mes",
+                "5 repurposes por mês",
                 "3 plataformas (X, LinkedIn, Newsletter)",
-                "Historico de 7 dias",
+                "Histórico de 7 dias",
               ]}
-              cta="Começar gratis"
+              cta="Começar grátis"
             />
             <PricingCard
               name="Creator"
               price="$19"
-              period="mes"
-              description="Para criadores de conteudo serios."
+              period="mês"
+              description="Para criadores de conteúdo sérios."
               features={[
-                "50 repurposes por mes",
+                "50 repurposes por mês",
                 "Todas as plataformas",
-                "Historico ilimitado",
+                "Histórico ilimitado",
                 "Tom de voz personalizado",
-                "Suporte prioritario",
+                "Suporte prioritário",
               ]}
               cta="Assinar Creator"
               highlighted
@@ -134,8 +134,8 @@ export default function HomePage() {
             <PricingCard
               name="Pro"
               price="$49"
-              period="mes"
-              description="Para equipes e agencias."
+              period="mês"
+              description="Para equipes e agências."
               features={[
                 "Repurposes ilimitados",
                 "Todas as plataformas",
@@ -158,23 +158,23 @@ export default function HomePage() {
           </h2>
           <div className="max-w-2xl mx-auto mt-12 space-y-6">
             <FaqItem
-              question="Que tipo de conteudo posso transformar?"
-              answer="Qualquer texto longo: artigos de blog, transcricoes de video/podcast, threads do Twitter, newsletters, capitulos de livro. Quanto mais conteudo, melhores os resultados."
+              question="Que tipo de conteúdo posso transformar?"
+              answer="Qualquer texto longo: artigos de blog, transcrições de vídeo/podcast, threads do Twitter, newsletters, capítulos de livro. Quanto mais conteúdo, melhores os resultados."
             />
             <FaqItem
               question="A IA copia meu texto ou cria algo novo?"
-              answer="A IA reescreve e adapta seu conteudo para cada plataforma, respeitando limites de caracteres, tom e boas praticas. Nao e copia — e transformacao inteligente."
+              answer="A IA reescreve e adapta seu conteúdo para cada plataforma, respeitando limites de caracteres, tom e boas práticas. Não é cópia — é transformação inteligente."
             />
             <FaqItem
               question="Posso editar os posts gerados?"
-              answer="Sim! Os posts gerados sao um ponto de partida otimizado. Voce pode editar antes de publicar."
+              answer="Sim! Os posts gerados são um ponto de partida otimizado. Você pode editar antes de publicar."
             />
             <FaqItem
-              question="Preciso de cartao de credito para comecar?"
-              answer="Nao. O plano Free e 100% gratuito, sem necessidade de cartao. Voce so paga se decidir fazer upgrade."
+              question="Preciso de cartão de crédito para começar?"
+              answer="Não. O plano Free é 100% gratuito, sem necessidade de cartão. Você só paga se decidir fazer upgrade."
             />
             <FaqItem
-              question="Quais plataformas sao suportadas?"
+              question="Quais plataformas são suportadas?"
               answer="Atualmente: X (Twitter), LinkedIn, Instagram e Newsletter. Estamos trabalhando em mais integrações."
             />
           </div>
@@ -185,16 +185,16 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-primary-500">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-[32px] font-bold text-white">
-            Pronto para multiplicar seu conteudo?
+            Pronto para multiplicar seu conteúdo?
           </h2>
           <p className="font-body text-lg text-primary-100 mt-4 max-w-xl mx-auto">
-            Experimente gratis — sem cartao de credito. Transforme seu proximo conteudo em posts para todas as plataformas.
+            Experimente grátis — sem cartão de crédito. Transforme seu próximo conteúdo em posts para todas as plataformas.
           </p>
           <Link
             href="/login"
             className="inline-block mt-8 bg-white text-primary-600 font-body font-semibold px-8 py-3.5 rounded-lg text-base hover:bg-primary-50 transition-colors duration-200 shadow-md"
           >
-            Começar gratis agora
+            Começar grátis agora
           </Link>
         </div>
       </section>

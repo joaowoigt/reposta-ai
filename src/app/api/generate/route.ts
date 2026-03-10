@@ -21,10 +21,11 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json();
-  const { inputText, inputUrl, platforms } = body as {
+  const { inputText, inputUrl, platforms, tone } = body as {
     inputText?: string;
     inputUrl?: string;
     platforms?: string[];
+    tone?: string;
   };
 
   if (!inputText || inputText.trim().length < 100) {
@@ -78,7 +79,7 @@ export async function POST(request: NextRequest) {
   }
 
   // Gerar conteúdo para todas as plataformas em paralelo
-  const results = await generateForPlatforms(inputText, platforms as Platform[]);
+  const results = await generateForPlatforms(inputText, platforms as Platform[], tone);
 
   // Salvar resultados no banco
   await db.insert(generations).values(

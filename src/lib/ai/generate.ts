@@ -63,7 +63,7 @@ export async function generateForPlatform({ inputText, platform }: GenerateOptio
   const config = PLATFORM_CONFIG[platform];
 
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-5-20250514",
+    model: "claude-sonnet-4-20250514",
     max_tokens: config.maxTokens,
     messages: [
       {

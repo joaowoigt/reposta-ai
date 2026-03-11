@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { users, generations } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
 import { generateForPlatforms, type Platform } from "@/lib/ai/generate";
+import { parseUrl } from "@/lib/utils/url-parser";
 
 const PLAN_LIMITS: Record<string, number> = {
   free: 5,
@@ -21,12 +22,25 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json();
-  const { inputText, inputUrl, platforms, tone } = body as {
+  const { inputText: rawInputText, inputUrl, platforms, tone } = body as {
     inputText?: string;
     inputUrl?: string;
     platforms?: string[];
     tone?: string;
   };
+
+  // Se inputUrl foi fornecido, extrair texto da URL
+  let inputText = rawInputText;
+
+  if (inputUrl && !inputText) {
+    const parseResult = await parseUrl(inputUrl);
+
+    if (!parseResult.success) {
+      return NextResponse.json({ error: parseResult.error }, { status: 400 });
+    }
+
+    inputText = parseResult.text;
+  }
 
   if (!inputText || inputText.trim().length < 100) {
     return NextResponse.json(

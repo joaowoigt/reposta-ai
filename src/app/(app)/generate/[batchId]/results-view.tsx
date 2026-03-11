@@ -52,9 +52,18 @@ export function ResultsView({
       <div className="flex items-center gap-3">
         <Link
           href="/generate"
-          className="font-body text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+          className="inline-flex items-center gap-2 font-body text-sm text-neutral-500 hover:text-neutral-700 transition-colors group"
         >
-          &larr; Nova geração
+          <svg
+            className="w-5 h-5 transition-transform group-hover:-translate-x-0.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          Nova geração
         </Link>
       </div>
 

@@ -46,11 +46,10 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
         return;
       }
 
-      // Redirecionar para página de resultados
+      // Redirecionar para página de resultados (manter loading até navegar)
       router.push(`/generate/${data.batchId}`);
     } catch {
       setError("Erro de conexão. Tente novamente.");
-    } finally {
       setIsLoading(false);
     }
   }

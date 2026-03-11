@@ -1,15 +1,17 @@
 "use client";
 
+import { PlatformIcon } from "./platform-icon";
+
 interface PlatformSelectorProps {
   selected: string[];
   onChange: (platforms: string[]) => void;
 }
 
 const PLATFORMS = [
-  { id: "x", label: "X (Twitter)", icon: "𝕏", color: "bg-neutral-900" },
-  { id: "linkedin", label: "LinkedIn", icon: "in", color: "bg-[#0A66C2]" },
-  { id: "instagram", label: "Instagram", icon: "IG", color: "bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]" },
-  { id: "newsletter", label: "Newsletter", icon: "✉", color: "bg-neutral-700" },
+  { id: "x", label: "X (Twitter)", color: "bg-neutral-900" },
+  { id: "linkedin", label: "LinkedIn", color: "bg-[#0A66C2]" },
+  { id: "instagram", label: "Instagram", color: "bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]" },
+  { id: "newsletter", label: "Newsletter", color: "bg-neutral-700" },
 ];
 
 export function PlatformSelector({ selected, onChange }: PlatformSelectorProps) {
@@ -36,8 +38,8 @@ export function PlatformSelector({ selected, onChange }: PlatformSelectorProps) 
                 : "border-neutral-200 bg-white hover:border-neutral-300"
             }`}
           >
-            <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${platform.color} text-white text-xs font-bold shrink-0`}>
-              {platform.icon}
+            <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${platform.color} text-white shrink-0`}>
+              <PlatformIcon platform={platform.id} className="w-4 h-4" />
             </div>
             <span className={`font-body text-sm ${isSelected ? "text-primary-700 font-medium" : "text-neutral-600"}`}>
               {platform.label}

@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import { CopyButton } from "./copy-button";
+import { PlatformIcon } from "./platform-icon";
 
 const PLATFORM_CONFIG: Record<
   string,
-  { label: string; icon: string }
+  { label: string; bgColor: string }
 > = {
-  x: { label: "X (Twitter)", icon: "𝕏" },
-  linkedin: { label: "LinkedIn", icon: "in" },
-  instagram: { label: "Instagram", icon: "📷" },
-  newsletter: { label: "Newsletter", icon: "✉" },
+  x: { label: "X (Twitter)", bgColor: "bg-neutral-900" },
+  linkedin: { label: "LinkedIn", bgColor: "bg-[#0A66C2]" },
+  instagram: { label: "Instagram", bgColor: "bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]" },
+  newsletter: { label: "Newsletter", bgColor: "bg-neutral-700" },
 };
 
 interface ResultCardProps {
@@ -34,7 +35,7 @@ export function ResultCard({
 
   const config = PLATFORM_CONFIG[platform] || {
     label: platform,
-    icon: "📝",
+    bgColor: "bg-neutral-500",
   };
 
   // Formatar X threads: separar por \n\n---\n\n ou numeração tipo "1/" "2/"
@@ -66,8 +67,8 @@ export function ResultCard({
       {/* Header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <span className="w-7 h-7 rounded-md bg-neutral-100 flex items-center justify-center text-xs font-medium text-neutral-600">
-            {config.icon}
+          <span className={`w-7 h-7 rounded-md ${config.bgColor} flex items-center justify-center text-white`}>
+            <PlatformIcon platform={platform} className="w-3.5 h-3.5" />
           </span>
           <span className="font-body text-sm font-medium text-neutral-800">
             {config.label}

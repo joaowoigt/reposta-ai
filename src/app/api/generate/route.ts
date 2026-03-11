@@ -6,12 +6,7 @@ import { eq, sql } from "drizzle-orm";
 import { randomUUID } from "crypto";
 import { generateForPlatforms, type Platform } from "@/lib/ai/generate";
 import { parseUrl } from "@/lib/utils/url-parser";
-
-const PLAN_LIMITS: Record<string, number> = {
-  free: 5,
-  creator: 50,
-  pro: Infinity,
-};
+import { getPlanLimit, canGenerate } from "@/lib/utils/plan-limits";
 
 const VALID_PLATFORMS: Platform[] = ["x", "linkedin", "instagram", "newsletter"];
 
@@ -85,8 +80,8 @@ export async function POST(request: NextRequest) {
       .where(eq(users.id, user.id));
   }
 
-  const limit = PLAN_LIMITS[user.plan] ?? 0;
-  if (currentGenerations >= limit) {
+  if (!canGenerate(user.plan, currentGenerations)) {
+    const limit = getPlanLimit(user.plan);
     return NextResponse.json(
       { error: `Limite de ${limit} gerações por mês atingido. Faça upgrade do seu plano.` },
       { status: 429 },

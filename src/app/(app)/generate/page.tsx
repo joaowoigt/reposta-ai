@@ -4,12 +4,7 @@ import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { GenerateForm } from "./generate-form";
-
-const PLAN_LIMITS: Record<string, number> = {
-  free: 5,
-  creator: 50,
-  pro: Infinity,
-};
+import { getPlanLimit } from "@/lib/utils/plan-limits";
 
 export default async function GeneratePage() {
   const session = await auth();
@@ -33,7 +28,7 @@ export default async function GeneratePage() {
     currentGenerations = 0;
   }
 
-  const limit = PLAN_LIMITS[user.plan] ?? 5;
+  const limit = getPlanLimit(user.plan);
 
   return (
     <div>

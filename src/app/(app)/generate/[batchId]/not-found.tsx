@@ -19,11 +19,11 @@ export default function BatchNotFound() {
         </svg>
       </div>
 
-      <h1 className="font-heading text-xl font-bold text-neutral-800 mb-2">
+      <h1 className="font-heading text-xl font-bold text-neutral-800 mb-3">
         Geração não encontrada
       </h1>
 
-      <p className="font-body text-sm text-neutral-500 mb-8 max-w-sm">
+      <p className="font-body text-sm text-neutral-500 mb-12 max-w-sm">
         Essa geração não existe ou não pertence à sua conta. Verifique o link ou gere um novo conteúdo.
       </p>
 

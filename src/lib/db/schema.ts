@@ -80,6 +80,7 @@ export const verificationTokens = pgTable(
 
 export const generations = pgTable("generations", {
   id: uuid("id").defaultRandom().primaryKey(),
+  batchId: uuid("batch_id").notNull(),
   userId: uuid("user_id")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),

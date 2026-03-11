@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth/config";
 import { db } from "@/lib/db";
 import { users, generations } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
+import { randomUUID } from "crypto";
 import { generateForPlatforms, type Platform } from "@/lib/ai/generate";
 import { parseUrl } from "@/lib/utils/url-parser";
 
@@ -93,11 +94,13 @@ export async function POST(request: NextRequest) {
   }
 
   // Gerar conteúdo para todas as plataformas em paralelo
+  const batchId = randomUUID();
   const results = await generateForPlatforms(inputText, platforms as Platform[], tone);
 
   // Salvar resultados no banco
   await db.insert(generations).values(
     results.map((result) => ({
+      batchId,
       userId: user.id,
       inputText,
       inputUrl: inputUrl || null,
@@ -116,5 +119,5 @@ export async function POST(request: NextRequest) {
     })
     .where(eq(users.id, user.id));
 
-  return NextResponse.json({ results });
+  return NextResponse.json({ batchId, results });
 }

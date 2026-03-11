@@ -11,12 +11,6 @@ interface GenerateFormProps {
   usageLimit: number;
 }
 
-interface GenerationResult {
-  platform: string;
-  outputText: string;
-  tokensUsed: number;
-}
-
 export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
   const router = useRouter();
   const [inputText, setInputText] = useState("");
@@ -24,7 +18,6 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
   const [tone, setTone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [results, setResults] = useState<GenerationResult[] | null>(null);
 
   const isAtLimit = usageUsed >= usageLimit;
   const charCount = inputText.length;
@@ -33,7 +26,6 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-    setResults(null);
     setIsLoading(true);
 
     try {
@@ -54,8 +46,8 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
         return;
       }
 
-      setResults(data.results);
-      router.refresh();
+      // Redirecionar para página de resultados
+      router.push(`/generate/${data.batchId}`);
     } catch {
       setError("Erro de conexão. Tente novamente.");
     } finally {
@@ -149,54 +141,6 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
         </button>
       </form>
 
-      {/* Results */}
-      {results && (
-        <div className="space-y-4 mt-8">
-          <h2 className="font-heading text-lg font-semibold text-neutral-800">Resultados</h2>
-          {results.map((result) => (
-            <ResultCard key={result.platform} result={result} />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function ResultCard({ result }: { result: GenerationResult }) {
-  const [copied, setCopied] = useState(false);
-
-  const PLATFORM_LABELS: Record<string, string> = {
-    x: "X (Twitter)",
-    linkedin: "LinkedIn",
-    instagram: "Instagram",
-    newsletter: "Newsletter",
-  };
-
-  async function handleCopy() {
-    await navigator.clipboard.writeText(result.outputText);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  }
-
-  return (
-    <div className="bg-white rounded-xl border border-neutral-200 shadow-sm p-5">
-      <div className="flex items-center justify-between mb-3">
-        <span className="font-body text-sm font-medium text-neutral-800">
-          {PLATFORM_LABELS[result.platform] || result.platform}
-        </span>
-        <button
-          onClick={handleCopy}
-          className="font-body text-xs px-3 py-1 rounded-md transition-colors duration-200 bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-        >
-          {copied ? "Copiado!" : "Copiar"}
-        </button>
-      </div>
-      <p className="font-body text-sm text-neutral-700 whitespace-pre-wrap leading-relaxed">
-        {result.outputText}
-      </p>
-      <p className="font-body text-xs text-neutral-400 mt-3">
-        {result.tokensUsed} tokens usados
-      </p>
     </div>
   );
 }

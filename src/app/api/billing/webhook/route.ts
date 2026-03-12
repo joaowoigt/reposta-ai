@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
+import { sendUpgradeEmail } from "@/lib/email/send";
 
 export async function POST(request: Request) {
   // Validar token do webhook
@@ -34,6 +35,7 @@ export async function POST(request: Request) {
             .set({ plan: "creator", updatedAt: new Date() })
             .where(eq(users.id, user.id));
           console.log(`[webhook] ${event}: ${user.email} → creator`);
+          sendUpgradeEmail(user.email, user.name || user.email);
         }
         break;
       }

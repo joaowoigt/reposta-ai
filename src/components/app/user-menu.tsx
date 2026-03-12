@@ -1,6 +1,7 @@
 "use client";
 
 import { useSession, signOut } from "next-auth/react";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -46,6 +47,12 @@ export function UserMenu() {
           </p>
           <p className="text-xs text-neutral-500">{session.user.email}</p>
         </div>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem className="cursor-pointer p-0">
+          <Link href="/billing" className="flex w-full px-2 py-1.5">
+            {session.user.plan === "free" ? "Fazer upgrade" : "Gerenciar assinatura"}
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={() => signOut({ callbackUrl: "/" })}

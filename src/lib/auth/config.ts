@@ -23,6 +23,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     session({ session, user }) {
       session.user.id = user.id;
+      session.user.plan = (user as typeof user & { plan: string }).plan as "free" | "creator" | "pro";
       return session;
     },
   },

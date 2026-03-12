@@ -4,7 +4,7 @@ export default auth((req) => {
   const isLoggedIn = !!req.auth;
   const { pathname } = req.nextUrl;
 
-  const protectedRoutes = ["/dashboard", "/generate", "/history"];
+  const protectedRoutes = ["/dashboard", "/generate", "/history", "/billing"];
   const isProtected = protectedRoutes.some((route) =>
     pathname.startsWith(route)
   );
@@ -17,5 +17,5 @@ export default auth((req) => {
 });
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/generate/:path*", "/history/:path*"],
+  matcher: ["/dashboard/:path*", "/generate/:path*", "/history/:path*", "/billing/:path*"],
 };

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /generate
+Disallow: /history
+Disallow: /settings
+Disallow: /api/
+
+Sitemap: https://repostai.com.br/sitemap.xml

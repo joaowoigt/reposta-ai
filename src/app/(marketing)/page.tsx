@@ -1,14 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FeatureStep } from "@/components/marketing/feature-step";
 import { PricingCard } from "@/components/marketing/pricing-card";
+
+export const metadata: Metadata = {
+  title: "Transforme 1 conteúdo em 10 posts — em segundos",
+  description:
+    "Cole seu artigo, blog post ou transcrição. A IA gera posts otimizados para X, LinkedIn, Instagram e Newsletter. Comece grátis.",
+  openGraph: {
+    title: "RepostAI — Repurposing de conteúdo com IA",
+    description:
+      "Transforme qualquer conteúdo longo em posts prontos para publicar em todas as plataformas. Grátis para começar.",
+  },
+};
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-white">
+      <section aria-labelledby="hero-heading" className="py-20 md:py-28 bg-white">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8 text-center">
-          <h1 className="font-heading text-4xl md:text-[56px] font-extrabold text-neutral-900 leading-[1.1] tracking-tight max-w-3xl mx-auto">
+          <h1 id="hero-heading" className="font-heading text-4xl md:text-[56px] font-extrabold text-neutral-900 leading-[1.1] tracking-tight max-w-3xl mx-auto">
             Transforme 1 conteúdo em 10 posts —{" "}
             <span className="text-primary-500">em segundos</span>
           </h1>
@@ -34,9 +46,9 @@ export default function HomePage() {
       </section>
 
       {/* Como funciona */}
-      <section id="como-funciona" className="py-16 md:py-24 bg-neutral-50">
+      <section id="como-funciona" aria-labelledby="como-funciona-heading" className="py-16 md:py-24 bg-neutral-50">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
-          <h2 className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800 text-center">
+          <h2 id="como-funciona-heading" className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800 text-center">
             Como funciona
           </h2>
           <p className="font-body text-lg text-neutral-500 text-center mt-4 max-w-2xl mx-auto">
@@ -78,9 +90,9 @@ export default function HomePage() {
       </section>
 
       {/* Plataformas suportadas */}
-      <section className="py-16 md:py-24 bg-white">
+      <section aria-labelledby="plataformas-heading" className="py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8 text-center">
-          <h2 className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800">
+          <h2 id="plataformas-heading" className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800">
             Plataformas suportadas
           </h2>
           <p className="font-body text-lg text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -96,9 +108,9 @@ export default function HomePage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-16 md:py-24 bg-neutral-50">
+      <section aria-labelledby="pricing-heading" className="py-16 md:py-24 bg-neutral-50">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
-          <h2 className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800 text-center">
+          <h2 id="pricing-heading" className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800 text-center">
             Planos simples, sem surpresas
           </h2>
           <p className="font-body text-lg text-neutral-500 text-center mt-4 max-w-2xl mx-auto">
@@ -151,9 +163,9 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-white">
+      <section aria-labelledby="faq-heading" className="py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
-          <h2 className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800 text-center">
+          <h2 id="faq-heading" className="font-heading text-3xl md:text-[32px] font-bold text-neutral-800 text-center">
             Perguntas frequentes
           </h2>
           <div className="max-w-2xl mx-auto mt-12 space-y-6">
@@ -182,9 +194,9 @@ export default function HomePage() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 md:py-24 bg-primary-500">
+      <section aria-labelledby="cta-heading" className="py-16 md:py-24 bg-primary-500">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8 text-center">
-          <h2 className="font-heading text-3xl md:text-[32px] font-bold text-white">
+          <h2 id="cta-heading" className="font-heading text-3xl md:text-[32px] font-bold text-white">
             Pronto para multiplicar seu conteúdo?
           </h2>
           <p className="font-body text-lg text-primary-100 mt-4 max-w-xl mx-auto">

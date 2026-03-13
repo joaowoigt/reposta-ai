@@ -7,7 +7,7 @@ export function Header() {
         <Link href="/" className="font-heading text-xl font-bold text-neutral-900">
           Repost<span className="text-primary-500">AI</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-8">
           <Link href="/#como-funciona" className="font-body text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
             Como funciona
           </Link>

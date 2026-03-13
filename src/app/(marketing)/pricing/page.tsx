@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { PricingCard } from "@/components/marketing/pricing-card";
+
+export const metadata: Metadata = {
+  title: "Planos e Preços",
+  description:
+    "Escolha o plano ideal para seu volume de conteúdo. Comece grátis com 5 repurposes por mês ou escale com Creator e Pro.",
+  openGraph: {
+    title: "Planos e Preços | RepostAI",
+    description:
+      "Planos a partir de R$0. Comece grátis e escale conforme sua necessidade de repurposing.",
+  },
+};
 
 export default function PricingPage() {
   return (

@@ -13,7 +13,7 @@ export function Footer() {
               Transforme 1 conteúdo em 10 posts — em segundos.
             </p>
           </div>
-          <nav className="flex gap-8">
+          <nav aria-label="Links do rodapé" className="flex gap-8">
             <Link href="/pricing" className="font-body text-sm hover:text-white transition-colors">
               Pricing
             </Link>

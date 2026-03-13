@@ -15,7 +15,7 @@ export function AppSidebar() {
 
   return (
     <aside className="w-64 bg-white border-r border-neutral-200 py-6 hidden md:block shrink-0">
-      <nav className="space-y-1 px-3">
+      <nav aria-label="Menu do app" className="space-y-1 px-3">
         {NAV_ITEMS.map((item) => {
           const isActive = pathname.startsWith(item.href);
           return (

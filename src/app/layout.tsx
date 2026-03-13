@@ -16,9 +16,46 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://repostai.com.br";
+
 export const metadata: Metadata = {
-  title: "RepostAI",
-  description: "Transforme 1 conteúdo em 10 posts — em segundos.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "RepostAI — Transforme 1 conteúdo em 10 posts",
+    template: "%s | RepostAI",
+  },
+  description:
+    "Cole seu artigo, blog post ou transcrição e receba posts otimizados para X, LinkedIn, Instagram e Newsletter em segundos. Repurposing de conteúdo com IA.",
+  keywords: [
+    "repurposing",
+    "conteúdo",
+    "IA",
+    "inteligência artificial",
+    "redes sociais",
+    "social media",
+    "posts",
+    "marketing digital",
+    "criador de conteúdo",
+    "RepostAI",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "RepostAI",
+    title: "RepostAI — Transforme 1 conteúdo em 10 posts",
+    description:
+      "Cole seu artigo, blog post ou transcrição e receba posts otimizados para X, LinkedIn, Instagram e Newsletter em segundos.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RepostAI — Transforme 1 conteúdo em 10 posts",
+    description:
+      "Cole seu artigo, blog post ou transcrição e receba posts otimizados para X, LinkedIn, Instagram e Newsletter em segundos.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

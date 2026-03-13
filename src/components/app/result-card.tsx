@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import { CopyButton } from "./copy-button";
 import { PlatformIcon } from "./platform-icon";
 
@@ -53,10 +54,17 @@ export function ResultCard({
         body: JSON.stringify({ generationId: id }),
       });
 
-      if (!res.ok) return;
-
       const data = await res.json();
+
+      if (!res.ok) {
+        toast.error(data.error || "Erro ao regenerar conteúdo. Tente novamente.");
+        return;
+      }
+
       onRegenerated?.(id, data.outputText, data.tokensUsed);
+      toast.success("Conteúdo regenerado com sucesso!");
+    } catch {
+      toast.error("Erro de conexão. Tente novamente.");
     } finally {
       setIsRegenerating(false);
     }

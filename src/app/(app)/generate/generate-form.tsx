@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { PlatformSelector } from "@/components/app/platform-selector";
 import { ToneSelector } from "@/components/app/tone-selector";
 import { UsageCounter } from "@/components/app/usage-counter";
@@ -42,7 +43,10 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || "Erro ao gerar conteúdo");
+        const errorMsg = data.error || "Erro ao gerar conteúdo";
+        setError(errorMsg);
+        toast.error(errorMsg);
+        setIsLoading(false);
         return;
       }
 
@@ -50,6 +54,7 @@ export function GenerateForm({ usageUsed, usageLimit }: GenerateFormProps) {
       router.push(`/generate/${data.batchId}`);
     } catch {
       setError("Erro de conexão. Tente novamente.");
+      toast.error("Erro de conexão. Tente novamente.");
       setIsLoading(false);
     }
   }

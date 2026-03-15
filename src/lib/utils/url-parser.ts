@@ -69,7 +69,7 @@ export async function parseUrl(url: string): Promise<ParseResult> {
       signal: controller.signal,
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (compatible; RepostAI/1.0; +https://reposta-ai.vercel.app)",
+          "Mozilla/5.0 (compatible; Splitpost/1.0; +https://splitpost.com.br)",
         Accept: "text/html,application/xhtml+xml",
       },
     });

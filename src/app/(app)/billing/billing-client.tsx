@@ -251,7 +251,7 @@ function UpgradeCard({
       </div>
 
       <p className="font-body text-sm text-neutral-500 mt-1">
-        Desbloqueie todo o potencial do RepostAI com 10x mais gerações.
+        Desbloqueie todo o potencial do Splitpost com 10x mais gerações.
       </p>
 
       <div className="mt-4 flex items-baseline gap-2">

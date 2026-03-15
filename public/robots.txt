@@ -6,4 +6,4 @@ Disallow: /history
 Disallow: /settings
 Disallow: /api/
 
-Sitemap: https://repostai.com.br/sitemap.xml
+Sitemap: https://splitpost.com.br/sitemap.xml

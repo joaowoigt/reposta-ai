@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://repostai.com.br";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://splitpost.com.br";
 
   return [
     {

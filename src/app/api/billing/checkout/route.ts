@@ -85,7 +85,7 @@ export async function POST(request: Request) {
     const subscription = await createSubscription({
       customer: asaasCustomerId,
       value: price,
-      description: `RepostAI Creator${LAUNCH_CAMPAIGN_ACTIVE ? " (Campanha de Lançamento)" : ""}`,
+      description: `Splitpost Creator${LAUNCH_CAMPAIGN_ACTIVE ? " (Campanha de Lançamento)" : ""}`,
       externalReference: user.id,
     });
 

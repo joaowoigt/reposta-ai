@@ -16,13 +16,13 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://repostai.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://splitpost.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "RepostAI — Transforme 1 conteúdo em 10 posts",
-    template: "%s | RepostAI",
+    default: "Splitpost — Um conteúdo. Todas as redes.",
+    template: "%s | Splitpost",
   },
   description:
     "Cole seu artigo, blog post ou transcrição e receba posts otimizados para X, LinkedIn, Instagram e Newsletter em segundos. Repurposing de conteúdo com IA.",
@@ -36,19 +36,19 @@ export const metadata: Metadata = {
     "posts",
     "marketing digital",
     "criador de conteúdo",
-    "RepostAI",
+    "Splitpost",
   ],
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "RepostAI",
-    title: "RepostAI — Transforme 1 conteúdo em 10 posts",
+    siteName: "Splitpost",
+    title: "Splitpost — Um conteúdo. Todas as redes.",
     description:
       "Cole seu artigo, blog post ou transcrição e receba posts otimizados para X, LinkedIn, Instagram e Newsletter em segundos.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RepostAI — Transforme 1 conteúdo em 10 posts",
+    title: "Splitpost — Um conteúdo. Todas as redes.",
     description:
       "Cole seu artigo, blog post ou transcrição e receba posts otimizados para X, LinkedIn, Instagram e Newsletter em segundos.",
   },

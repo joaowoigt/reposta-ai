@@ -4,11 +4,11 @@ import { FeatureStep } from "@/components/marketing/feature-step";
 import { PricingCard } from "@/components/marketing/pricing-card";
 
 export const metadata: Metadata = {
-  title: "Transforme 1 conteúdo em 10 posts — em segundos",
+  title: "Um conteúdo. Todas as redes.",
   description:
     "Cole seu artigo, blog post ou transcrição. A IA gera posts otimizados para X, LinkedIn, Instagram e Newsletter. Comece grátis.",
   openGraph: {
-    title: "RepostAI — Repurposing de conteúdo com IA",
+    title: "Splitpost — Repurposing de conteúdo com IA",
     description:
       "Transforme qualquer conteúdo longo em posts prontos para publicar em todas as plataformas. Grátis para começar.",
   },
@@ -21,8 +21,8 @@ export default function HomePage() {
       <section aria-labelledby="hero-heading" className="py-20 md:py-28 bg-white">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8 text-center">
           <h1 id="hero-heading" className="font-heading text-4xl md:text-[56px] font-extrabold text-neutral-900 leading-[1.1] tracking-tight max-w-3xl mx-auto">
-            Transforme 1 conteúdo em 10 posts —{" "}
-            <span className="text-primary-500">em segundos</span>
+            Um conteúdo.{" "}
+            <span className="text-primary-500">Todas as redes.</span>
           </h1>
           <p className="font-body text-lg text-neutral-500 mt-6 max-w-2xl mx-auto leading-relaxed">
             Cole seu artigo, blog post ou transcrição. A IA gera posts otimizados
@@ -119,22 +119,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
             <PricingCard
               name="Free"
-              price="$0"
+              price="R$0"
               description="Para experimentar o poder do repurposing."
               features={[
-                "5 repurposes por mês",
-                "3 plataformas (X, LinkedIn, Newsletter)",
+                "5 gerações por mês",
+                "Todas as plataformas",
                 "Histórico de 7 dias",
               ]}
               cta="Começar grátis"
             />
             <PricingCard
               name="Creator"
-              price="$19"
+              price="R$47"
+              originalPrice="R$67"
               period="mês"
               description="Para criadores de conteúdo sérios."
               features={[
-                "50 repurposes por mês",
+                "50 gerações por mês",
                 "Todas as plataformas",
                 "Histórico ilimitado",
                 "Tom de voz personalizado",
@@ -142,14 +143,15 @@ export default function HomePage() {
               ]}
               cta="Assinar Creator"
               highlighted
+              badge="Oferta de lançamento"
             />
             <PricingCard
               name="Pro"
-              price="$49"
+              price="R$147"
               period="mês"
               description="Para equipes e agências."
               features={[
-                "Repurposes ilimitados",
+                "Gerações ilimitadas",
                 "Todas as plataformas",
                 "API access",
                 "Agendamento de posts",

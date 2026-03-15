@@ -9,9 +9,9 @@ async function main() {
   console.log("Enviando email de teste...");
 
   const { data, error } = await resend.emails.send({
-    from: "RepostAI <onboarding@resend.dev>",
+    from: "Splitpost <onboarding@resend.dev>",
     to: "joaowoigt@gmail.com",
-    subject: "Teste RepostAI - Email funcionando!",
+    subject: "Teste Splitpost - Email funcionando!",
     html: "<h1>Teste</h1><p>Se voce recebeu isso, o Resend esta funcionando.</p>",
   });
 

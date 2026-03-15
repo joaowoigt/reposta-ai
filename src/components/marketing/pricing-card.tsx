@@ -9,6 +9,8 @@ interface PricingCardProps {
   cta: string;
   highlighted?: boolean;
   disabled?: boolean;
+  badge?: string;
+  originalPrice?: string;
 }
 
 export function PricingCard({
@@ -20,6 +22,8 @@ export function PricingCard({
   cta,
   highlighted = false,
   disabled = false,
+  badge,
+  originalPrice,
 }: PricingCardProps) {
   return (
     <div
@@ -30,12 +34,24 @@ export function PricingCard({
       }`}
     >
       <div>
+        {badge && (
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-700 font-body mb-3">
+            {badge}
+          </span>
+        )}
         <h3 className="font-heading text-lg font-semibold text-neutral-800">{name}</h3>
         <p className="font-body text-sm text-neutral-500 mt-1">{description}</p>
       </div>
       <div className="mt-4">
-        <span className="font-heading text-4xl font-bold text-neutral-900">{price}</span>
-        {period && <span className="font-body text-sm text-neutral-500 ml-1">/{period}</span>}
+        <div className="flex items-baseline gap-1">
+          <span className="font-heading text-4xl font-bold text-neutral-900">{price}</span>
+          {period && <span className="font-body text-sm text-neutral-500">/{period}</span>}
+        </div>
+        {originalPrice && (
+          <p className="font-body text-sm text-neutral-400 mt-1">
+            Depois {originalPrice}/mês
+          </p>
+        )}
       </div>
       <ul className="mt-6 space-y-3 flex-1">
         {features.map((feature) => (

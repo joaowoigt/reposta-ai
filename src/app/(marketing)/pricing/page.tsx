@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Escolha o plano ideal para seu volume de conteúdo. Comece grátis com 5 repurposes por mês ou escale com Creator e Pro.",
   openGraph: {
-    title: "Planos e Preços | RepostAI",
+    title: "Planos e Preços | Splitpost",
     description:
       "Planos a partir de R$0. Comece grátis e escale conforme sua necessidade de repurposing.",
   },
@@ -25,22 +25,23 @@ export default function PricingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
           <PricingCard
             name="Free"
-            price="$0"
+            price="R$0"
             description="Para experimentar o poder do repurposing."
             features={[
-              "5 repurposes por mês",
-              "3 plataformas (X, LinkedIn, Newsletter)",
+              "5 gerações por mês",
+              "Todas as plataformas",
               "Histórico de 7 dias",
             ]}
             cta="Começar grátis"
           />
           <PricingCard
             name="Creator"
-            price="$19"
+            price="R$47"
+            originalPrice="R$67"
             period="mês"
             description="Para criadores de conteúdo sérios."
             features={[
-              "50 repurposes por mês",
+              "50 gerações por mês",
               "Todas as plataformas",
               "Histórico ilimitado",
               "Tom de voz personalizado",
@@ -48,14 +49,15 @@ export default function PricingPage() {
             ]}
             cta="Assinar Creator"
             highlighted
+            badge="Oferta de lançamento"
           />
           <PricingCard
             name="Pro"
-            price="$49"
+            price="R$147"
             period="mês"
             description="Para equipes e agências."
             features={[
-              "Repurposes ilimitados",
+              "Gerações ilimitadas",
               "Todas as plataformas",
               "API access",
               "Agendamento de posts",

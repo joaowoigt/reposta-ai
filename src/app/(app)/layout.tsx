@@ -19,7 +19,7 @@ export default async function AppLayout({
     <div className="min-h-screen flex flex-col bg-neutral-50">
       <header className="sticky top-0 z-50 bg-white border-b border-neutral-200 h-16 flex items-center px-5 shrink-0">
         <Link href="/dashboard" className="font-heading text-xl font-bold text-neutral-900">
-          Repost<span className="text-primary-500">AI</span>
+          Splitpost
         </Link>
         <div className="ml-auto flex items-center gap-4">
           <UserMenu />

@@ -44,14 +44,14 @@ export function UpgradeEmail({ name }: UpgradeEmailProps) {
           </Section>
 
           <Section style={ctaSection}>
-            <Link href="https://repostai.com.br/generate" style={button}>
+            <Link href="https://splitpost.com.br/generate" style={button}>
               Gerar conteúdo agora
             </Link>
           </Section>
 
           <Text style={text}>
             Você pode gerenciar sua assinatura a qualquer momento na{" "}
-            <Link href="https://repostai.com.br/billing" style={link}>
+            <Link href="https://splitpost.com.br/billing" style={link}>
               página de assinatura
             </Link>.
           </Text>
@@ -59,7 +59,7 @@ export function UpgradeEmail({ name }: UpgradeEmailProps) {
           <Hr style={hr} />
 
           <Text style={footer}>
-            RepostAI — Repurpose seu conteúdo com IA
+            Splitpost — Um conteúdo. Todas as redes.
           </Text>
         </Container>
       </Body>

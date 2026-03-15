@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "RepostAI — Transforme 1 conteúdo em 10 posts";
+export const alt = "Splitpost — Um conteúdo. Todas as redes.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,7 +29,7 @@ export default async function Image() {
             left: 0,
             width: "100%",
             height: 6,
-            backgroundColor: "#f25c3a",
+            backgroundColor: "#6366f1",
             display: "flex",
           }}
         />
@@ -46,7 +46,7 @@ export default async function Image() {
               width: 48,
               height: 48,
               borderRadius: 12,
-              backgroundColor: "#f25c3a",
+              backgroundColor: "#6366f1",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -56,7 +56,7 @@ export default async function Image() {
               marginRight: 12,
             }}
           >
-            R
+            S
           </div>
           <div
             style={{
@@ -67,7 +67,7 @@ export default async function Image() {
               display: "flex",
             }}
           >
-            RepostAI
+            Splitpost
           </div>
         </div>
 
@@ -82,7 +82,7 @@ export default async function Image() {
             letterSpacing: -1,
           }}
         >
-          Transforme 1 conteúdo em 10 posts
+          Um conteúdo. Todas as redes.
         </div>
 
         <div

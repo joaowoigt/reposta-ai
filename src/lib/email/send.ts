@@ -7,7 +7,7 @@ export async function sendWelcomeEmail(to: string, name: string) {
     const { data, error } = await resend.emails.send({
       from: EMAIL_FROM,
       to,
-      subject: "Bem-vindo ao RepostAI!",
+      subject: "Bem-vindo ao Splitpost!",
       react: WelcomeEmail({ name }),
     });
 

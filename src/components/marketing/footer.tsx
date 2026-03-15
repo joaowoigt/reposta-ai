@@ -7,10 +7,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div>
             <span className="font-heading text-xl text-white font-bold">
-              Repost<span className="text-primary-400">AI</span>
+              Splitpost
             </span>
             <p className="font-body text-sm mt-2 max-w-xs">
-              Transforme 1 conteúdo em 10 posts — em segundos.
+              Um conteúdo. Todas as redes.
             </p>
           </div>
           <nav aria-label="Links do rodapé" className="flex gap-8">
@@ -26,7 +26,7 @@ export function Footer() {
           </nav>
         </div>
         <div className="border-t border-neutral-800 mt-8 pt-8">
-          <p className="font-body text-xs text-neutral-500">&copy; 2026 RepostAI. Todos os direitos reservados.</p>
+          <p className="font-body text-xs text-neutral-500">&copy; 2026 Splitpost. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

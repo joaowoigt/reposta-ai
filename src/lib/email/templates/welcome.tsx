@@ -21,10 +21,10 @@ export function WelcomeEmail({ name }: WelcomeEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>Bem-vindo ao RepostAI — transforme seu conteúdo em posts para todas as plataformas</Preview>
+      <Preview>Bem-vindo ao Splitpost — transforme seu conteúdo em posts para todas as plataformas</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Bem-vindo ao RepostAI!</Heading>
+          <Heading style={h1}>Bem-vindo ao Splitpost!</Heading>
 
           <Text style={text}>
             Olá {firstName},
@@ -37,7 +37,7 @@ export function WelcomeEmail({ name }: WelcomeEmailProps) {
           </Text>
 
           <Section style={ctaSection}>
-            <Link href="https://repostai.com.br/generate" style={button}>
+            <Link href="https://splitpost.com.br/generate" style={button}>
               Gerar meu primeiro conteúdo
             </Link>
           </Section>
@@ -50,7 +50,7 @@ export function WelcomeEmail({ name }: WelcomeEmailProps) {
           <Hr style={hr} />
 
           <Text style={footer}>
-            RepostAI — Repurpose seu conteúdo com IA
+            Splitpost — Um conteúdo. Todas as redes.
           </Text>
         </Container>
       </Body>

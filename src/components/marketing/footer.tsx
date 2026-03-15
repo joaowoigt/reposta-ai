@@ -17,12 +17,12 @@ export function Footer() {
             <Link href="/pricing" className="font-body text-sm hover:text-white transition-colors">
               Pricing
             </Link>
-            <a href="#" className="font-body text-sm hover:text-white transition-colors">
+            <Link href="/termos" className="font-body text-sm hover:text-white transition-colors">
               Termos
-            </a>
-            <a href="#" className="font-body text-sm hover:text-white transition-colors">
+            </Link>
+            <Link href="/privacidade" className="font-body text-sm hover:text-white transition-colors">
               Privacidade
-            </a>
+            </Link>
           </nav>
         </div>
         <div className="border-t border-neutral-800 mt-8 pt-8">

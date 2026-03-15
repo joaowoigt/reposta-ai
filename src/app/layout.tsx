@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import { SessionProvider } from "@/components/app/session-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -70,6 +71,7 @@ export default function RootLayout({
       >
         <SessionProvider>{children}</SessionProvider>
         <Toaster position="top-right" richColors closeButton />
+        <Analytics />
       </body>
     </html>
   );
